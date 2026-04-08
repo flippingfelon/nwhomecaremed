@@ -53,11 +53,100 @@ p{max-width:72ch}
   .nav-main a{width:100%;padding:.75rem 1rem}
 }
 
-/* ── Hero ────────────────────────────────────────────── */
+/* ── Hero V2 ─────────────────────────────────────────── */
+.hero-v2{position:relative;overflow:hidden;color:#fff;padding:0}
+.hero-v2__bg{position:absolute;inset:0;background:linear-gradient(135deg,#1a2332 0%,#243347 40%,#1e2a3a 100%);z-index:0}
+.hero-v2__bg::before{content:'';position:absolute;top:-50%;right:-30%;width:80%;height:200%;background:radial-gradient(ellipse,rgba(218,65,59,.08) 0%,transparent 70%);animation:heroGlow 8s ease-in-out infinite alternate}
+.hero-v2__bg::after{content:'';position:absolute;bottom:-40%;left:-20%;width:60%;height:150%;background:radial-gradient(ellipse,rgba(79,136,185,.06) 0%,transparent 70%);animation:heroGlow 10s ease-in-out infinite alternate-reverse}
+
+@keyframes heroGlow{0%{transform:translate(0,0) scale(1)}100%{transform:translate(30px,-20px) scale(1.05)}}
+
+.hero-v2__grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;padding:4rem 0 2.5rem}
+.hero-v2__content{max-width:560px}
+
+/* Badges */
+.hero-v2__badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}
+.hero-v2__badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:.4rem .9rem;border-radius:999px;font-size:.8rem;font-weight:500;color:#94a3b8;backdrop-filter:blur(4px);animation:fadeSlideUp .6s ease both}
+.hero-v2__badge:nth-child(2){animation-delay:.1s}
+.hero-v2__badge svg{width:14px;height:14px;flex-shrink:0;color:#DA413B}
+
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* Title */
+.hero-v2__title{font-size:clamp(2.25rem,5vw,3.5rem);font-weight:800;color:#fff;line-height:1.15;letter-spacing:-.03em;margin-bottom:1.25rem;animation:fadeSlideUp .6s .15s ease both}
+.hero-v2__highlight{position:relative;display:inline-block;color:#DA413B}
+.hero-v2__highlight::after{content:'';position:absolute;bottom:.05em;left:0;width:100%;height:.12em;background:rgba(218,65,59,.25);border-radius:4px;transform:scaleX(0);transform-origin:left;animation:underlineReveal .8s .6s ease forwards}
+
+@keyframes underlineReveal{to{transform:scaleX(1)}}
+
+/* Subtitle */
+.hero-v2__sub{font-size:clamp(1rem,2vw,1.2rem);color:#94a3b8;line-height:1.7;margin-bottom:2rem;animation:fadeSlideUp .6s .25s ease both}
+
+/* Actions */
+.hero-v2__actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:2.5rem;animation:fadeSlideUp .6s .35s ease both}
+.btn--lg{padding:1rem 2rem;font-size:1.05rem}
+
+/* Stats */
+.hero-v2__stats{display:flex;align-items:center;gap:1.5rem;animation:fadeSlideUp .6s .45s ease both}
+.hero-v2__stat{text-align:center}
+.hero-v2__stat-num{display:block;font-family:'Plus Jakarta Sans','Inter',sans-serif;font-size:2rem;font-weight:800;color:#fff;line-height:1}
+.hero-v2__stat-label{display:block;font-size:.7rem;color:#64748b;text-transform:uppercase;letter-spacing:.08em;margin-top:.35rem}
+.hero-v2__stat-divider{width:1px;height:40px;background:rgba(255,255,255,.12)}
+
+/* Photo Mosaic */
+.hero-v2__mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:.75rem;height:420px;animation:fadeSlideUp .8s .2s ease both}
+.hero-v2__mosaic-img{position:relative;border-radius:12px;background-size:cover;background-position:center;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.3);transition:transform .4s ease,box-shadow .4s ease}
+.hero-v2__mosaic-img:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.hero-v2__mosaic-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 50%);transition:opacity .3s}
+.hero-v2__mosaic-img:hover::after{opacity:.7}
+.hero-v2__mosaic-label{position:absolute;bottom:.75rem;left:.75rem;font-size:.75rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.06em;z-index:1;opacity:.8;transition:opacity .3s}
+.hero-v2__mosaic-img:hover .hero-v2__mosaic-label{opacity:1}
+
+.hero-v2__mosaic-img--1{grid-row:1/3;border-radius:12px;animation:mosaicFloat 6s ease-in-out infinite}
+.hero-v2__mosaic-img--2{animation:mosaicFloat 6s 1s ease-in-out infinite}
+.hero-v2__mosaic-img--3{animation:mosaicFloat 6s 2s ease-in-out infinite}
+.hero-v2__mosaic-img--4{display:none}
+
+@keyframes mosaicFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+
+/* Brand bar inside hero */
+.hero-v2__brands{position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.06);padding:1.25rem 0}
+.hero-v2__brands .container{display:flex;align-items:center;gap:2rem;justify-content:center;flex-wrap:wrap}
+.hero-v2__brands-label{font-size:.75rem;color:#4F88B9;text-transform:uppercase;letter-spacing:.1em;font-weight:600;white-space:nowrap}
+.hero-v2__brands-logos{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.hero-v2__brands-logos img{height:28px;width:auto;opacity:.4;filter:brightness(0) invert(1);transition:opacity .3s}
+.hero-v2__brands-logos img:hover{opacity:.8}
+
+/* ── Mobile Hero V2 ─────────────────────────────────── */
+@media(max-width:960px){
+  .hero-v2__grid{grid-template-columns:1fr;gap:2rem;padding:3rem 0 2rem}
+  .hero-v2__mosaic{height:280px;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr}
+  .hero-v2__mosaic-img--1{grid-row:auto}
+  .hero-v2__mosaic-img--4{display:block}
+  .hero-v2__content{max-width:100%}
+  .hero-v2__title{font-size:clamp(1.75rem,5vw,2.75rem)}
+}
+
+@media(max-width:600px){
+  .hero-v2__grid{padding:2.5rem 0 1.5rem;gap:1.5rem}
+  .hero-v2__mosaic{height:180px;grid-template-columns:1fr 1fr;grid-template-rows:1fr;gap:.5rem}
+  .hero-v2__mosaic-img--3,.hero-v2__mosaic-img--4{display:none}
+  .hero-v2__mosaic-img--1{grid-row:auto}
+  .hero-v2__stats{gap:1rem}
+  .hero-v2__stat-num{font-size:1.5rem}
+  .hero-v2__stat-label{font-size:.65rem}
+  .hero-v2__stat-divider{height:30px}
+  .hero-v2__actions{flex-direction:column}
+  .hero-v2__actions .btn{width:100%;justify-content:center}
+  .hero-v2__brands-logos{gap:1.25rem}
+  .hero-v2__brands-logos img{height:22px}
+  .hero-v2__brands .container{gap:1rem}
+}
+
+/* Legacy hero (service pages still use it) */
 .hero{background:linear-gradient(135deg,#1e2a3a 0%,#2d3e52 100%);color:#fff;padding:5rem 0 4rem;text-align:center}
 .hero h1{color:#fff;margin-bottom:1rem}
 .hero-sub{font-size:clamp(1.05rem,2.2vw,1.35rem);color:#bcc7d4;max-width:640px;margin:0 auto 2rem}
-.hero-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-bottom:2.5rem}
 .badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:.45rem 1rem;border-radius:999px;font-size:.85rem;font-weight:500;color:#dce3ea}
 .badge svg{width:16px;height:16px;flex-shrink:0}
 

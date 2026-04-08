@@ -98,40 +98,83 @@
 </header>
 
 <!-- ═══ HERO ═══ -->
-<section class="hero">
-    <div class="container">
-        <div class="hero-badges">
-            <span class="badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                CAPS I, II, III Certified
-            </span>
-            <span class="badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
-                Oregon CCB #247114
-            </span>
-            <span class="badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                Portland, OR
-            </span>
+<section class="hero-v2">
+    <div class="hero-v2__bg"></div>
+    <div class="container hero-v2__grid">
+        <!-- LEFT: Content -->
+        <div class="hero-v2__content">
+            <div class="hero-v2__badges">
+                <span class="hero-v2__badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    CAPS I, II, III Certified
+                </span>
+                <span class="hero-v2__badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                    Oregon CCB #247114
+                </span>
+            </div>
+
+            <h1 class="hero-v2__title">
+                Helping People<br>
+                <span class="hero-v2__highlight">Safely Age In Place</span>
+            </h1>
+
+            <p class="hero-v2__sub">Safe, affordable home modifications so you or your loved ones can live independently — in the comfort of home.</p>
+
+            <div class="hero-v2__actions">
+                <a href="#contact" class="btn btn-primary btn--lg">Get a Free Assessment</a>
+                <a href="tel:5038280999" class="btn btn-white btn--lg">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    503-828-0999
+                </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="hero-v2__stats">
+                <div class="hero-v2__stat">
+                    <span class="hero-v2__stat-num" data-target="3">0</span>
+                    <span class="hero-v2__stat-label">CAPS Certifications</span>
+                </div>
+                <div class="hero-v2__stat-divider"></div>
+                <div class="hero-v2__stat">
+                    <span class="hero-v2__stat-num" data-target="4">0</span>
+                    <span class="hero-v2__stat-label">Product Lines</span>
+                </div>
+                <div class="hero-v2__stat-divider"></div>
+                <div class="hero-v2__stat">
+                    <span class="hero-v2__stat-num" data-target="1" data-suffix=" Day">0</span>
+                    <span class="hero-v2__stat-label">Most Installs</span>
+                </div>
+            </div>
         </div>
-        <h1>Helping People Safely Age In Place</h1>
-        <p class="hero-sub">Safe, affordable home modifications so you or your loved ones can live independently — in the comfort of home.</p>
-        <div class="btn-group">
-            <a href="#contact" class="btn btn-primary">Get a Free Assessment</a>
-            <a href="tel:5038280999" class="btn btn-white">Call 503-828-0999</a>
+
+        <!-- RIGHT: Photo Mosaic -->
+        <div class="hero-v2__mosaic">
+            <div class="hero-v2__mosaic-img hero-v2__mosaic-img--1" style="background-image:url('/assets/images/bath-remodel.jpg')">
+                <span class="hero-v2__mosaic-label">Bath Remodels</span>
+            </div>
+            <div class="hero-v2__mosaic-img hero-v2__mosaic-img--2" style="background-image:url('/assets/images/ceiling-lift-hoist.jpg')">
+                <span class="hero-v2__mosaic-label">Ceiling Lifts</span>
+            </div>
+            <div class="hero-v2__mosaic-img hero-v2__mosaic-img--3" style="background-image:url('/assets/images/ramp-pathway3g.jpg')">
+                <span class="hero-v2__mosaic-label">Ramps</span>
+            </div>
+            <div class="hero-v2__mosaic-img hero-v2__mosaic-img--4" style="background-image:url('/assets/images/stairlift-pinnacle.webp')">
+                <span class="hero-v2__mosaic-label">Stairlifts</span>
+            </div>
         </div>
     </div>
-</section>
 
-<!-- ═══ BRAND PARTNERS ═══ -->
-<section class="brand-bar">
-    <div class="container">
-        <h3>Certified Dealer &amp; Installer For</h3>
-        <div class="brand-logos">
-            <img src="/assets/images/bestbath-logo-white.png" alt="Best Bath" height="36">
-            <img src="/assets/images/etac-logo.png" alt="ETAC / Molift" height="36">
-            <img src="/assets/images/ezaccess-logo-white.png" alt="EZ Access" height="36">
-            <img src="/assets/images/harmar-logo-white.png" alt="Harmar" height="36">
+    <!-- Brand bar integrated -->
+    <div class="hero-v2__brands">
+        <div class="container">
+            <span class="hero-v2__brands-label">Certified Dealer For</span>
+            <div class="hero-v2__brands-logos">
+                <img src="/assets/images/bestbath-logo-white.png" alt="Best Bath" loading="lazy">
+                <img src="/assets/images/etac-logo.png" alt="ETAC / Molift" loading="lazy">
+                <img src="/assets/images/ezaccess-logo-white.png" alt="EZ Access" loading="lazy">
+                <img src="/assets/images/harmar-logo-white.png" alt="Harmar" loading="lazy">
+            </div>
         </div>
     </div>
 </section>
@@ -365,15 +408,46 @@
 (function(){
   var nav=document.querySelector('.nav-main');
   nav.addEventListener('click',function(e){if(e.target.tagName==='A')nav.classList.remove('open')});
+
   var bar=document.getElementById('mobileCta');
-  if(!bar)return;
-  var contact=document.getElementById('contact');
-  if(!contact)return;
-  var io=new IntersectionObserver(function(entries){
-    bar.style.transform=entries[0].isIntersecting?'translateY(100%)':'translateY(0)';
-    bar.style.transition='transform .3s ease';
-  },{threshold:0.1});
-  io.observe(contact);
+  if(bar){
+    var contact=document.getElementById('contact');
+    if(contact){
+      var io=new IntersectionObserver(function(entries){
+        bar.style.transform=entries[0].isIntersecting?'translateY(100%)':'translateY(0)';
+        bar.style.transition='transform .3s ease';
+      },{threshold:0.1});
+      io.observe(contact);
+    }
+  }
+
+  // Count-up animation for hero stats
+  var counted=false;
+  var statsSection=document.querySelector('.hero-v2__stats');
+  if(statsSection){
+    var sio=new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting&&!counted){
+        counted=true;
+        document.querySelectorAll('.hero-v2__stat-num').forEach(function(el){
+          var target=parseInt(el.getAttribute('data-target'),10);
+          var suffix=el.getAttribute('data-suffix')||'';
+          var start=0;
+          var duration=1200;
+          var startTime=null;
+          function step(ts){
+            if(!startTime)startTime=ts;
+            var progress=Math.min((ts-startTime)/duration,1);
+            var eased=1-Math.pow(1-progress,3);
+            var current=Math.round(start+(target-start)*eased);
+            el.textContent=current+suffix;
+            if(progress<1)requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        });
+      }
+    },{threshold:0.3});
+    sio.observe(statsSection);
+  }
 })();
 </script>
 
