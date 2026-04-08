@@ -159,3 +159,77 @@ p{max-width:72ch}
 /* ── Cross-link Banner ───────────────────────────────── */
 .cross-links{padding:3rem 0}
 .cross-links h2{text-align:center;margin-bottom:2rem}
+
+/* ── Sticky Mobile CTA Bar ───────────────────────────── */
+.mobile-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:#0f172a;padding:.65rem 1rem;box-shadow:0 -4px 16px rgba(0,0,0,.2)}
+.mobile-cta-bar .container{display:flex;gap:.65rem}
+.mobile-cta-bar a{flex:1;text-align:center;padding:.75rem .5rem;border-radius:8px;font-weight:700;font-size:.95rem}
+.mobile-cta-bar .mcta-call{background:#0369a1;color:#fff}
+.mobile-cta-bar .mcta-form{background:#fff;color:#0f172a}
+
+/* ══════════════════════════════════════════════════════
+   MOBILE RESPONSIVE — 768px and below
+   ══════════════════════════════════════════════════════ */
+@media(max-width:768px){
+  /* Show sticky CTA bar */
+  .mobile-cta-bar{display:block}
+  body{padding-bottom:72px}
+
+  /* Tighter section padding */
+  .section{padding:3rem 0}
+  .hero{padding:3.5rem 0 3rem}
+  .service-hero{padding:3rem 0 2.25rem}
+  .cta-banner{padding:2.5rem 0}
+  .cross-links{padding:2rem 0}
+
+  /* Full-width buttons */
+  .btn-group{flex-direction:column;align-items:stretch}
+  .btn{justify-content:center;width:100%;padding:1rem 1.25rem;min-height:48px}
+
+  /* Card grid: single column on phones */
+  .card-grid{grid-template-columns:1fr;gap:1rem}
+  .card{padding:1.5rem}
+
+  /* Features grid: single column */
+  .features-grid{grid-template-columns:1fr;gap:1.25rem}
+
+  /* Process steps: single column */
+  .process-steps{grid-template-columns:1fr;gap:1.5rem}
+
+  /* Larger touch targets for nav */
+  .nav-main a{padding:.85rem 1rem;font-size:1rem;min-height:48px;display:flex;align-items:center}
+
+  /* FAQ: larger touch target */
+  .faq-item summary{padding:1rem 0;min-height:48px;font-size:1rem;gap:.75rem}
+
+  /* Prevent iOS zoom on form inputs (must be >= 16px) */
+  .form-field input,.form-field select,.form-field textarea{font-size:16px;padding:.85rem 1rem}
+  .form-field label{font-size:.9rem;margin-bottom:.4rem}
+
+  /* Hero badges wrap tighter */
+  .hero-badges{gap:.5rem;margin-bottom:1.75rem}
+  .badge{padding:.4rem .75rem;font-size:.8rem}
+
+  /* Service hero inline button fix */
+  .service-hero .btn-group{justify-content:stretch !important}
+
+  /* Footer single col already handled at 700px */
+  .footer-bottom{flex-direction:column;align-items:center;text-align:center}
+
+  /* Tighter container on small phones */
+  .container{width:min(1200px,88%)}
+}
+
+/* ══════════════════════════════════════════════════════
+   SMALL PHONES — 380px and below
+   ══════════════════════════════════════════════════════ */
+@media(max-width:380px){
+  .container{width:min(1200px,94%)}
+  h1{font-size:1.75rem}
+  h2{font-size:1.35rem}
+  .hero{padding:2.5rem 0 2rem}
+  .hero-sub{font-size:.95rem}
+  .badge{font-size:.75rem;padding:.35rem .6rem}
+  .card{padding:1.25rem}
+  .mobile-cta-bar a{font-size:.85rem;padding:.7rem .4rem}
+}

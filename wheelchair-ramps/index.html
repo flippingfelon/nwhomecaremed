@@ -20,6 +20,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="/assets/css/main.css">
 
     <script type="application/ld+json">
@@ -272,6 +274,21 @@
         </div>
     </div>
 </footer>
+
+<!-- Mobile Sticky CTA -->
+<div class="mobile-cta-bar">
+    <div class="container">
+        <a href="tel:5038280999" class="mcta-call">Call Now</a>
+        <a href="/#contact" class="mcta-form">Free Assessment</a>
+    </div>
+</div>
+
+<script>
+(function(){
+  var nav=document.querySelector('.nav-main');
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A')nav.classList.remove('open')});
+})();
+</script>
 
 </body>
 </html>
