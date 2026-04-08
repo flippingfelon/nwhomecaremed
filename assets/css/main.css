@@ -166,6 +166,45 @@ p{max-width:72ch}
 .mb-1{margin-bottom:1rem}.mb-2{margin-bottom:2rem}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 
+/* ── Image Cards ─────────────────────────────────────── */
+.card-img{border-radius:12px;overflow:hidden;border:1px solid #e0e0e0;transition:all .3s;display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.card-img:hover{border-color:#DA413B;box-shadow:0 8px 24px rgba(218,65,59,.1);transform:translateY(-2px)}
+.card-img-photo{height:200px;background-size:cover;background-position:center;position:relative}
+.card-img-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.35) 0%,transparent 50%)}
+.card-img-body{padding:1.5rem;background:#fff;flex:1}
+.card-img-body h3{margin-bottom:.4rem}
+.card-img-body p{color:#555;font-size:.9rem}
+.card-img-body .card-link{display:inline-flex;align-items:center;gap:.35rem;margin-top:.75rem;font-weight:600;font-size:.9rem;color:#DA413B}
+
+/* ── Service Hero with Image ─────────────────────────── */
+.service-hero--img{position:relative;overflow:hidden;padding:0}
+.service-hero--img .hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:380px}
+.service-hero--img .hero-content{padding:3.5rem 2rem 3.5rem 0;display:flex;flex-direction:column;justify-content:center}
+.service-hero--img .hero-image{background-size:cover;background-position:center;position:relative}
+.service-hero--img .hero-image::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,#1e2a3a 0%,transparent 30%)}
+
+@media(max-width:768px){
+  .service-hero--img .hero-split{grid-template-columns:1fr}
+  .service-hero--img .hero-content{padding:3rem 0 1.5rem}
+  .service-hero--img .hero-image{height:220px;order:-1}
+  .service-hero--img .hero-image::before{background:linear-gradient(to top,#1e2a3a 0%,transparent 50%)}
+  .card-img-photo{height:160px}
+}
+
+/* ── Brand Logos Bar ─────────────────────────────────── */
+.brand-bar{padding:2.5rem 0}
+.brand-bar h3{text-align:center;color:#888;font-weight:500;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1.5rem}
+.brand-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2.5rem}
+.brand-logos img{height:36px;width:auto;opacity:.7;filter:grayscale(100%);transition:all .3s}
+.brand-logos img:hover{opacity:1;filter:grayscale(0%)}
+.brand-bar--dark .brand-logos img{filter:brightness(0) invert(1);opacity:.6}
+.brand-bar--dark .brand-logos img:hover{opacity:1}
+
+@media(max-width:768px){
+  .brand-logos{gap:1.5rem}
+  .brand-logos img{height:28px}
+}
+
 /* ── Cross-link Banner ───────────────────────────────── */
 .cross-links{padding:3rem 0}
 .cross-links h2{text-align:center;margin-bottom:2rem}
