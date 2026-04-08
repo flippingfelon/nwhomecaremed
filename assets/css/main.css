@@ -96,7 +96,7 @@ p{max-width:72ch}
 /* Photo Mosaic */
 .hero-v2__mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:.75rem;height:420px;animation:fadeSlideUp .8s .2s ease both}
 .hero-v2__mosaic-img{position:relative;border-radius:12px;background-size:cover;background-position:center;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.3);transition:transform .4s ease,box-shadow .4s ease}
-.hero-v2__mosaic-img:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.hero-v2__mosaic-img:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 12px 40px rgba(0,0,0,.4);animation-play-state:paused}
 .hero-v2__mosaic-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 50%);transition:opacity .3s}
 .hero-v2__mosaic-img:hover::after{opacity:.7}
 .hero-v2__mosaic-label{position:absolute;bottom:.75rem;left:.75rem;font-size:.75rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.06em;z-index:1;opacity:.8;transition:opacity .3s}
@@ -120,7 +120,7 @@ p{max-width:72ch}
 /* ── Mobile Hero V2 ─────────────────────────────────── */
 @media(max-width:960px){
   .hero-v2__grid{grid-template-columns:1fr;gap:2rem;padding:3rem 0 2rem}
-  .hero-v2__mosaic{height:280px;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr}
+  .hero-v2__mosaic{height:220px;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr;gap:.5rem}
   .hero-v2__mosaic-img--1{grid-row:auto}
   .hero-v2__mosaic-img--4{display:block}
   .hero-v2__content{max-width:100%}
