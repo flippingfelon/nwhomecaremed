@@ -31,10 +31,10 @@ p{max-width:72ch}
 
 /* ── Header ──────────────────────────────────────────── */
 .site-header{background:#fff;border-bottom:1px solid #e0e0e0;position:sticky;top:0;z-index:100}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.5rem 0;gap:1rem}
-.header-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
-.header-logo img{height:48px;width:auto}
-.header-logo-text{font-family:'Plus Jakarta Sans','Inter',sans-serif;font-size:1.15rem;font-weight:800;color:#1e2a3a;white-space:nowrap;line-height:1.2}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.35rem 0;gap:1rem}
+.header-logo{display:flex;align-items:center;gap:.5rem;text-decoration:none}
+.header-logo img{height:32px;width:auto;border-radius:4px}
+.header-logo-text{font-family:'Plus Jakarta Sans','Inter',sans-serif;font-size:.95rem;font-weight:800;color:#1e2a3a;white-space:nowrap;line-height:1.2}
 .header-logo-text span{color:#DA413B}
 
 /* Navigation */
@@ -342,8 +342,8 @@ p{max-width:72ch}
   .footer-bottom{flex-direction:column;align-items:center;text-align:center}
   .container{width:min(1200px,88%)}
 
-  .header-logo img{height:40px}
-  .header-logo-text{font-size:1rem}
+  .header-logo img{height:28px}
+  .header-logo-text{font-size:.9rem}
 }
 
 @media(max-width:380px){
@@ -355,6 +355,6 @@ p{max-width:72ch}
   .badge{font-size:.75rem;padding:.35rem .6rem}
   .card{padding:1.25rem}
   .mobile-cta-bar a{font-size:.85rem;padding:.7rem .4rem}
-  .header-logo img{height:32px}
-  .header-logo-text{font-size:.9rem}
+  .header-logo img{height:24px}
+  .header-logo-text{font-size:.85rem}
 }
