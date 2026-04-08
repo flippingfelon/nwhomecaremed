@@ -1,0 +1,161 @@
+/* ── Reset & Base ─────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#1e293b;line-height:1.7;background:#fff}
+img{max-width:100%;height:auto;display:block}
+a{color:#0369a1;text-decoration:none;transition:color .2s}
+a:hover{color:#0c4a6e}
+ul,ol{list-style:none}
+
+/* ── Typography ──────────────────────────────────────── */
+h1,h2,h3,h4{font-family:'Plus Jakarta Sans','Inter',system-ui,sans-serif;color:#0f172a;line-height:1.25}
+h1{font-size:clamp(2rem,5vw,3.25rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:700}
+h3{font-size:clamp(1.15rem,2.5vw,1.5rem);font-weight:600}
+p{max-width:72ch}
+
+/* ── Layout ──────────────────────────────────────────── */
+.container{width:min(1200px,92%);margin-inline:auto}
+.section{padding:4.5rem 0}
+.section--alt{background:#f8fafc}
+.section--dark{background:#0f172a;color:#e2e8f0}
+.section--dark h2,.section--dark h3{color:#f1f5f9}
+.section--accent{background:linear-gradient(135deg,#0369a1 0%,#0e7490 100%);color:#fff}
+.section--accent h2,.section--accent h3{color:#fff}
+
+/* ── Header ──────────────────────────────────────────── */
+.site-header{background:#fff;border-bottom:1px solid #e2e8f0;position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0;gap:1rem}
+.logo{font-family:'Plus Jakarta Sans','Inter',sans-serif;font-size:1.35rem;font-weight:800;color:#0f172a;white-space:nowrap}
+.logo span{color:#0369a1}
+.header-phone{font-weight:700;font-size:1.1rem;color:#0369a1;white-space:nowrap}
+.header-phone:hover{color:#0c4a6e}
+
+/* Navigation */
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem}
+.nav-toggle span{display:block;width:24px;height:2px;background:#0f172a;margin:5px 0;transition:all .3s}
+.nav-main{display:flex;align-items:center;gap:.25rem}
+.nav-main a{padding:.5rem .85rem;border-radius:6px;font-size:.9rem;font-weight:500;color:#334155;transition:all .2s}
+.nav-main a:hover,.nav-main a.active{background:#f1f5f9;color:#0369a1}
+.nav-cta{background:#0369a1 !important;color:#fff !important;font-weight:600 !important}
+.nav-cta:hover{background:#0c4a6e !important}
+
+@media(max-width:860px){
+  .nav-toggle{display:block}
+  .nav-main{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:1rem;border-bottom:1px solid #e2e8f0;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+  .nav-main.open{display:flex}
+  .nav-main a{width:100%;padding:.75rem 1rem}
+}
+
+/* ── Hero ────────────────────────────────────────────── */
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 100%);color:#fff;padding:5rem 0 4rem;text-align:center}
+.hero h1{color:#fff;margin-bottom:1rem}
+.hero-sub{font-size:clamp(1.05rem,2.2vw,1.35rem);color:#cbd5e1;max-width:640px;margin:0 auto 2rem}
+.hero-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-bottom:2.5rem}
+.badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:.45rem 1rem;border-radius:999px;font-size:.85rem;font-weight:500;color:#e2e8f0}
+.badge svg{width:16px;height:16px;flex-shrink:0}
+
+/* ── Buttons ─────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.75rem;border-radius:8px;font-weight:600;font-size:1rem;border:none;cursor:pointer;transition:all .25s}
+.btn-primary{background:#0369a1;color:#fff}
+.btn-primary:hover{background:#0c4a6e;color:#fff;transform:translateY(-1px);box-shadow:0 4px 12px rgba(3,105,161,.3)}
+.btn-secondary{background:#fff;color:#0369a1;border:2px solid #0369a1}
+.btn-secondary:hover{background:#f0f9ff;color:#0c4a6e}
+.btn-white{background:#fff;color:#0f172a}
+.btn-white:hover{background:#f1f5f9;transform:translateY(-1px)}
+
+.btn-group{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+
+/* ── Cards ───────────────────────────────────────────── */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.75rem;margin-top:2rem}
+.card{background:#fff;border-radius:12px;padding:2rem;border:1px solid #e2e8f0;transition:all .3s}
+.card:hover{border-color:#0369a1;box-shadow:0 8px 24px rgba(3,105,161,.1);transform:translateY(-2px)}
+.card-icon{width:48px;height:48px;background:linear-gradient(135deg,#e0f2fe,#bae6fd);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.card-icon svg{width:24px;height:24px;color:#0369a1}
+.card h3{margin-bottom:.5rem}
+.card p{color:#475569;font-size:.95rem}
+.card .card-link{display:inline-flex;align-items:center;gap:.35rem;margin-top:1rem;font-weight:600;font-size:.9rem;color:#0369a1}
+.card .card-link:hover{gap:.5rem}
+
+/* ── Service Page Hero ───────────────────────────────── */
+.service-hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 100%);color:#fff;padding:4rem 0 3rem}
+.service-hero .breadcrumb{font-size:.85rem;color:#94a3b8;margin-bottom:1.5rem}
+.service-hero .breadcrumb a{color:#93c5fd}
+.service-hero .breadcrumb a:hover{color:#fff}
+.service-hero h1{color:#fff;margin-bottom:1rem}
+.service-hero p{color:#cbd5e1;font-size:1.1rem;max-width:640px}
+
+/* ── Features List ───────────────────────────────────── */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2rem}
+.feature{display:flex;gap:1rem;align-items:flex-start}
+.feature-check{flex-shrink:0;width:28px;height:28px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:.15rem}
+.feature-check svg{width:14px;height:14px;color:#16a34a}
+.feature h4{font-size:1rem;margin-bottom:.2rem}
+.feature p{font-size:.9rem;color:#475569}
+
+/* ── FAQ ─────────────────────────────────────────────── */
+.faq-list{max-width:800px;margin:2rem auto 0}
+.faq-item{border-bottom:1px solid #e2e8f0}
+.faq-item summary{padding:1.25rem 0;font-weight:600;font-size:1.05rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq-item summary::after{content:'+';font-size:1.5rem;color:#0369a1;font-weight:300;transition:transform .2s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item .faq-answer{padding:0 0 1.25rem;color:#475569;line-height:1.8}
+
+/* ── CTA Banner ──────────────────────────────────────── */
+.cta-banner{text-align:center;padding:4rem 0}
+.cta-banner h2{margin-bottom:.75rem}
+.cta-banner p{color:rgba(255,255,255,.85);margin:0 auto 2rem;max-width:540px;font-size:1.05rem}
+
+/* ── Form ────────────────────────────────────────────── */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:640px;margin:0 auto}
+.form-grid .full{grid-column:1/-1}
+.form-field label{display:block;font-weight:600;font-size:.85rem;margin-bottom:.35rem;color:#334155}
+.form-field input,.form-field select,.form-field textarea{width:100%;padding:.7rem 1rem;border:1px solid #cbd5e1;border-radius:8px;font-size:.95rem;font-family:inherit;transition:border-color .2s}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:#0369a1;box-shadow:0 0 0 3px rgba(3,105,161,.1)}
+.form-field textarea{resize:vertical;min-height:100px}
+
+@media(max-width:600px){
+  .form-grid{grid-template-columns:1fr}
+}
+
+/* ── Stats Bar ───────────────────────────────────────── */
+.stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2rem;text-align:center;padding:2rem 0}
+.stat-num{font-size:2.25rem;font-weight:800;color:#0369a1}
+.section--dark .stat-num{color:#38bdf8}
+.stat-label{font-size:.9rem;color:#64748b;margin-top:.25rem}
+.section--dark .stat-label{color:#94a3b8}
+
+/* ── Process Steps ───────────────────────────────────── */
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;margin-top:2rem;counter-reset:step}
+.step{text-align:center;position:relative}
+.step::before{counter-increment:step;content:counter(step);display:flex;align-items:center;justify-content:center;width:48px;height:48px;background:#0369a1;color:#fff;font-weight:800;font-size:1.25rem;border-radius:50%;margin:0 auto 1rem}
+.step h3{margin-bottom:.5rem}
+.step p{font-size:.9rem;color:#475569}
+
+/* ── Footer ──────────────────────────────────────────── */
+.site-footer{background:#0f172a;color:#94a3b8;padding:3rem 0 1.5rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+.footer-brand{font-size:1.15rem;font-weight:700;color:#f1f5f9;margin-bottom:.75rem}
+.footer-brand span{color:#38bdf8}
+.site-footer p{font-size:.9rem;line-height:1.7}
+.site-footer h4{color:#f1f5f9;font-size:.95rem;margin-bottom:1rem}
+.site-footer ul li{margin-bottom:.5rem}
+.site-footer ul a{color:#94a3b8;font-size:.9rem}
+.site-footer ul a:hover{color:#38bdf8}
+.footer-bottom{border-top:1px solid #1e293b;padding-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;font-size:.8rem;gap:.5rem}
+.footer-bottom a{color:#94a3b8}
+.footer-bottom a:hover{color:#38bdf8}
+
+@media(max-width:700px){
+  .footer-grid{grid-template-columns:1fr}
+}
+
+/* ── Utilities ───────────────────────────────────────── */
+.text-center{text-align:center}
+.mt-1{margin-top:1rem}.mt-2{margin-top:2rem}.mt-3{margin-top:3rem}
+.mb-1{margin-bottom:1rem}.mb-2{margin-bottom:2rem}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+
+/* ── Cross-link Banner ───────────────────────────────── */
+.cross-links{padding:3rem 0}
+.cross-links h2{text-align:center;margin-bottom:2rem}
